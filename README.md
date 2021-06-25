@@ -1,3 +1,5 @@
+OrderingCardDelivery  [![Build status](https://ci.appveyor.com/api/projects/status/h1wi3gnb62wp9ri1?svg=true)](https://ci.appveyor.com/project/Aleks4404/orderingcarddelivery)
+
 # Домашнее задание к занятию «2.2. Selenide»
 
 ## Задача №1 - Заказ доставки карты
