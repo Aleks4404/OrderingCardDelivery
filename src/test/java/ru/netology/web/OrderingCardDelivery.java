@@ -31,7 +31,7 @@ public class OrderingCardDelivery {
         form.$("[data-test-id=phone] input").setValue(validPhone);
         form.$("[data-test-id=agreement]").click();
         form.$(".button").click();
-        $(withText("Успешно!")).shouldBe(visible, Duration.ofSeconds(7));
+        $(withText("Успешно!")).shouldBe(visible, Duration.ofSeconds(11));
         $("[data-test-id='notification'] .notification__content").shouldHave(exactText("Встреча успешно забронирована на " + formatter.format(nextDate)));
     }
 }
