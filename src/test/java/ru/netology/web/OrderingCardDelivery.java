@@ -8,7 +8,8 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -97,4 +98,13 @@ public class OrderingCardDelivery {
         $(".button").click();
         $("[data-test-id=date]").shouldHave(exactText("Заказ на выбранную дату невозможен"));
     }
+
+    @Test
+    void shouldLeaveAllFieldsEmpty() {
+        open("http://localhost:9999");
+        SelenideElement form = $(".form");
+        $(".button").click();
+        $("[data-test-id=city]").shouldHave(exactText("Поле обязательно для заполнения"));
+
+}
 }
