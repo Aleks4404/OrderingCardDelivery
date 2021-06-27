@@ -9,7 +9,7 @@ branches:
 build: off
 
 install:
-  - java -jar ./artifacts/app-card-delivery.jar
+  $App = Start-Process -FilePath java -ArgumentList "-jar ./artifacts/app-card-delivery.jar" -PassThru
 
 build_script:
   - chmod +x gradlew
