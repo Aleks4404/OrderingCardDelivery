@@ -106,5 +106,5 @@ public class OrderingCardDelivery {
         $(".button").click();
         $("[data-test-id=city]").shouldHave(exactText("Поле обязательно для заполнения"));
 
-}
+    }
 }
